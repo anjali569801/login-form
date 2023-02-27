@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from './Button';
+import LoginForm from './LoginForm';
 
 function App() {
 
  
   return(
-    <div>
-     <Button disabled={true}>save</Button>
+    <div className="bg-indigo-600 h-screen flex items-center justify-center">
+     <LoginForm></LoginForm>
     </div>
   );
 }

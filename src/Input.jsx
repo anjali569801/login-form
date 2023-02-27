@@ -4,9 +4,9 @@ function Input(props) {
 
  
   return(
-    <div className="border border-black">
-      <input placeholder={props.placeholder} type={props.type}  value={props.value} onChange={props.onChange} className={'p-1 ' + (props.className)}></input>
-    </div>
+    
+      <input placeholder={props.placeholder} type={props.type}  value={props.value} onChange={props.onChange} className={'p-1 px-4 w-48 bg-transparent border border-white placeholder-white rounded-sm border-1' + (props.className)}></input>
+   
   );
 }
 
