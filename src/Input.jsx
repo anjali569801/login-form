@@ -1,14 +1,20 @@
 import React from 'react';
+import {useField} from 'formik';
 
-function Input({id,type,name,touched,error,...rest}) {
+function Input({id,type,name,...rest}) {
 
-  
+  const [field,meta]=useField(name);
+  const {onChange,onBlur,value}=field;
+  const{touched,error}=meta
  
   return(
     <div className='flex flex-col'>
-      <label htmlFor={name} className="sr-only">{name}</label>
+      <label htmlFor={id} className="sr-only">{name}</label>
       <input id={id} 
         name={name}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
         required  
         type={type || "text"}  
         {...rest}
