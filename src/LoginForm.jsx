@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import Button from './Button';
-import Input from './Input';
+import {FormikInput} from './Input';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
@@ -35,14 +35,14 @@ function LoginForm() {
       className=" space-y-8 w-64 h-64">
       <Form>
         <div className="flex flex-col space-y-2">
-          <Input name="email"
+          <FormikInput name="email"
             placeholder="email address"
             id="email"
             type="email"
             auto-complete="email address" />
 
 
-          <Input name="password"
+          <FormikInput name="password"
             placeholder="password"
             id="password"
             type="password"

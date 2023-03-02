@@ -1,20 +1,15 @@
-import React ,{useState} from 'react';
+import React  from 'react';
 import LoginForm from './LoginForm';
-import A from './useContext/A'
-import AlertContext from './useContext/Context';
-
+import FancyInput from './FancyInput';
 
 function App() {
-
-  const [count,setCount]=useState(0)
  
   return(
-    <AlertContext.Provider value={{count,setCount}}>
-    <div className="bg-indigo-600 h-screen flex items-center justify-center">
-      <A></A>
+    <div className="bg-indigo-600 h-screen flex flex-col space-y-2 items-center justify-center">
+      <FancyInput placeholder="search"></FancyInput>
      <LoginForm></LoginForm>
     </div>
-    </AlertContext.Provider>
+    
   );
 }
 
