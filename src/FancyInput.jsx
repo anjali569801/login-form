@@ -1,4 +1,5 @@
 import React from 'react';
+import FormikHoc from './FormikHoc'
 
 function FancyInput({id,type,name,label,className,...rest}) {
 
@@ -14,5 +15,5 @@ function FancyInput({id,type,name,label,className,...rest}) {
    </div>
   );
 }
-
+export const FormikFancyInput=FormikHoc(FancyInput)
 export default FancyInput;
