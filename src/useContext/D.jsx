@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
-import {Context} from './App'
+import AlertContext from './Context'
 
 function D(){
-  const {count,setCount}=useContext(Context)
+  const {count,setCount}=useContext(AlertContext)
   return(
     <div className="bg-white">
       count is {count}
