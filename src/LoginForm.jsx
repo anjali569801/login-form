@@ -30,7 +30,7 @@ export function LoginForm({handleChange,handleBlur,values,touched,handleSubmit,e
   //   })
 
   return (
-    
+    <div className="bg-indigo-600 h-screen flex flex-col space-y-2 items-center justify-center">
      <form onSubmit={handleSubmit} className=" space-y-8 w-64 h-64">
       
         <div className="flex flex-col space-y-2">
@@ -61,9 +61,12 @@ export function LoginForm({handleChange,handleBlur,values,touched,handleSubmit,e
         <div className="space-y-2 mt-2 ">
           <Button disabled={!dirty || !isValid } type="submit">login</Button>
           <Button type="button" >reset</Button>
-          <Link className="text-white ml-16">forget password?</Link>
+          <Link to="/signUpPage" className="text-white ml-16">creat an account</Link>
+          
+          <Link  className="text-white ml-16">forget password?</Link>
         </div>
       </form>
+    </div>
   );
 }
 

@@ -13,8 +13,9 @@ function Input({id,type,name,label,touched,className,error,...rest}) {
         type={type || "text"}  
         {...rest}
         className={'p-1 px-4 w-48 bg-transparent border border-white placeholder-white rounded-sm border-1 focus:ring-indigo-500 ' +className }></input>
+      <div className="h-5">
       { touched && error && <span className="text-red-700">{error}</span>}
-    
+    </div>
    </div>
   );
 }

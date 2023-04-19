@@ -1,12 +1,17 @@
 import React  from 'react';
+import {Routes,Route} from 'react-router-dom'
 import Login from './LoginForm';
+//import SignUpPage from './SignUpPage';
 
 function App() {
  
   return(
-    <div className="bg-indigo-600 h-screen flex flex-col space-y-2 items-center justify-center">
-     <Login></Login>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login></Login>}/>
+{/*       //<SignUpPage></SignUpPage> */}
+    
+     
+     </Routes>
     
   );
 }
