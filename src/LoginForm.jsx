@@ -1,19 +1,24 @@
-import React from 'react';
+import React,{useContext} from 'react';
 //import { Formik, Form } from 'formik';
 import Button from './Button';
 import Input from './Input';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import { withFormik } from 'formik';
+//import Popup from './Popup';
+//import PopContext from './PopContext';
 
   const onFormSubmit = (values) => {
     console.log("email", values);
+    setShowPopup(true)
   }
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().required().email(),
     password: Yup.string().required().min(8).max(12)
   })
+
+
 
   const initialValues = {
     email: "",
@@ -22,7 +27,9 @@ import { withFormik } from 'formik';
 
 export function LoginForm({handleChange,handleBlur,values,touched,handleSubmit,errors,isValid,dirty}) {
 
-  //console.log("email", values);
+ 
+  //const {showPopup,setShowPopup} = useContext(PopContext)
+ // console.log("show popup",showPopup);
   //   const {handleChange,handleBlur,values,touched,handleSubmit,errors,isValid,dirty,resetForm} = useFormik({
 
   // initialValues  ,onSubmit:onFormSubmit,
@@ -59,11 +66,14 @@ export function LoginForm({handleChange,handleBlur,values,touched,handleSubmit,e
 
         </div>
         <div className="space-y-2 mt-2 ">
-          <Button disabled={!dirty || !isValid } type="submit">login</Button>
-          <Button type="button" >reset</Button>
-          <Link to="/signUpPage" className="text-white ml-16">creat an account</Link>
+          <Button disabled={!dirty || !isValid } type="submit" >login</Button>
           
-          <Link  className="text-white ml-16">forget password?</Link>
+          <Button type="button" >reset</Button>
+          <div className="flex flex-col pl-16 text-white">
+          <Link to="/signUpPage">creat an account</Link>
+          
+          <Link>forget password?</Link>
+            </div>
         </div>
       </form>
     </div>

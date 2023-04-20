@@ -1,17 +1,23 @@
-import React  from 'react';
+import React,{useState}  from 'react';
 import {Routes,Route} from 'react-router-dom'
 import Login from './LoginForm';
-//import SignUpPage from './SignUpPage';
+import SignUpPage from './SignUpPage';
+//import Popup from './Popup'
+import PopContext from './PopContext';
 
 function App() {
+  //const [message,setMessage] =useState('login successfully');
+   //const [showPopup,setShowPopup] = useState(false)
  
   return(
-    <Routes>
+   // <PopContext.Provider value={{message:message,setShowPopup:setShowPopup,showPopup:showPopup}}>
+          <Routes>
       <Route path="/" element={<Login></Login>}/>
-{/*       //<SignUpPage></SignUpPage> */}
+      <Route path="/signUpPage" element={<SignUpPage></SignUpPage>}></Route>
+</Routes>
     
-     
-     </Routes>
+   // </PopContext.Provider>
+
     
   );
 }
