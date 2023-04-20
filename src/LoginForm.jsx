@@ -70,7 +70,7 @@ export function LoginForm({handleChange,handleBlur,values,touched,handleSubmit,e
           
           <Button type="button" >reset</Button>
           <div className="flex flex-col pl-16 text-white">
-          <Link to="/signUpPage">creat an account</Link>
+          <Link to="/signUpPage">create an account</Link>
           
           <Link>forget password?</Link>
             </div>
